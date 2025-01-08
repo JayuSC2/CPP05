@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:29:55 by juitz             #+#    #+#             */
-/*   Updated: 2025/01/08 14:23:26 by juitz            ###   ########.fr       */
+/*   Updated: 2025/01/08 14:59:10 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include <stdexcept>
 #include "AForm.hpp"
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -46,7 +46,7 @@ class Bureaucrat
 		void setGrade(int grade);
 		void IncrementGrade();
 		void DecrementGrade();
-		void signForm(Form &form);
+		void signForm(AForm &form);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat);

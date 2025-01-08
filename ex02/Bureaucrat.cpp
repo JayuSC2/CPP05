@@ -6,12 +6,11 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:40:02 by juitz             #+#    #+#             */
-/*   Updated: 2025/01/08 14:16:56 by juitz            ###   ########.fr       */
+/*   Updated: 2025/01/08 16:45:47 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
 
 Bureaucrat::Bureaucrat() : _name(""), _grade(150)
 {
@@ -108,17 +107,16 @@ void Bureaucrat::setGrade(int grade)
 	this->_grade = grade;
 }
 
-void Bureaucrat::signForm(Form &form)
+void Bureaucrat::signForm(AForm &Aform)
 {
-	if (!form.getIsSigned() && (this->getGrade() <= form.getSignGrade()))
+	if (!Aform.getIsSigned() && (this->getGrade() <= Aform.getSignGrade()))
 	{
-		form.beSigned(*this);
-		std::cout << _name << " signed " << form.getName() << std::endl;
+		Aform.beSigned(*this);
+		std::cout << _name << " signed " << Aform.getName() << std::endl;
 	}
-	else if (form.getIsSigned())
-		std::cout << _name << " couldn't sign " << form.getName() << " because the form is already signed." << std::endl;
-	else if (this->getGrade() > form.getSignGrade())
-		std::cout << _name << " couldn't sign " << form.getName() << " because grade is too low." << std::endl;
-
+	else if (Aform.getIsSigned())
+		std::cout << _name << " couldn't sign " << Aform.getName() << " because the Aform is already signed." << std::endl;
+	else if (this->getGrade() > Aform.getSignGrade())
+		std::cout << _name << " couldn't sign " << Aform.getName() << " because grade is too low." << std::endl;
 }
 

@@ -35,6 +35,18 @@ AForm::AForm(const std::string &name, int const &signGrade, int const &execGrade
 		throw GradeTooHighException();
 }
 
+AForm::AForm(const AForm &copy) 
+    : _name(copy._name), _isSigned(copy._isSigned), _signGrade(copy._signGrade), _execGrade(copy._execGrade)
+{
+}
+
+AForm &AForm::operator=(const AForm &other)
+{
+    if (this != &other)
+        _isSigned = other._isSigned;
+    return *this;
+}
+
 AForm::~AForm()
 {
 	std::cout << "AForm default destructor called" << std::endl;
