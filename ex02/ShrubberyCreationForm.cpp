@@ -6,12 +6,13 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 15:21:08 by juitz             #+#    #+#             */
-/*   Updated: 2025/01/08 17:11:04 by juitz            ###   ########.fr       */
+/*   Updated: 2025/01/09 17:14:50 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
+#include <istream>
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("DefaultForm", 145, 137)
 {
@@ -44,5 +45,13 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 const std::string &ShrubberyCreationForm::getName() const
 {
     return (AForm::getName());
+}
+
+bool ShrubberyCreationForm::createShrubberyFile() const
+{
+	std::ofstream outFile(getName() + "_shrubbery");
+	if (!outFile)
+		return (std::cerr << "Error creating file: " << getName() + "_shrubbery" << std::endl, true);
+	return (false);
 }
 

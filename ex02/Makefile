@@ -6,7 +6,7 @@
 #    By: juitz <juitz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/04 16:26:51 by juitz             #+#    #+#              #
-#    Updated: 2025/01/08 16:02:56 by juitz            ###   ########.fr        #
+#    Updated: 2025/01/09 18:33:44 by juitz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS =	main.cpp\
 		AForm.cpp\
 		ShrubberyCreationForm.cpp\
+		RobotomyRequestForm.cpp\
 		Bureaucrat.cpp
 
 OBJS = $(SRCS:.cpp=.o)

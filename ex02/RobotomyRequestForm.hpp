@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 14:25:53 by juitz             #+#    #+#             */
-/*   Updated: 2025/01/09 16:36:22 by juitz            ###   ########.fr       */
+/*   Created: 2025/01/09 17:08:43 by juitz             #+#    #+#             */
+/*   Updated: 2025/01/09 18:38:18 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "AForm.hpp"
+#include <cstdlib>
 
-class ShrubberyCreationForm : public AForm
+class RobotomyRequestForm : public AForm
 {
-/* 	private:
-		std::string const _name;
-		bool _isSigned;
-		int const _signGrade;
-		int const _execGrade; */
 	private:
 		std::string _target;
 	public:
-		ShrubberyCreationForm();
-		ShrubberyCreationForm(const std::string &target);
-		ShrubberyCreationForm(const ShrubberyCreationForm &copy);
-		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
-		~ShrubberyCreationForm();
+		RobotomyRequestForm();
+		RobotomyRequestForm(const std::string &target);
+		RobotomyRequestForm(const RobotomyRequestForm &copy);
+		RobotomyRequestForm &operator=(const RobotomyRequestForm &other);
+		~RobotomyRequestForm();
 
 		const std::string &getName() const override;
 		const int &getSignGrade() const;
@@ -35,7 +31,5 @@ class ShrubberyCreationForm : public AForm
 		const bool &getIsSigned() const;
 		
 		void beSigned(Bureaucrat bureaucrat);
-		bool createShrubberyFile() const;
+		bool robotomization(const std::string &target);
 };
-
-std::ostream &operator<<(std::ostream &out, const ShrubberyCreationForm &SCF);
