@@ -6,13 +6,13 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:08:43 by juitz             #+#    #+#             */
-/*   Updated: 2025/01/09 18:38:18 by juitz            ###   ########.fr       */
+/*   Updated: 2025/01/13 17:20:56 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "AForm.hpp"
-#include <cstdlib>
+//#include <ctime>
 
 class RobotomyRequestForm : public AForm
 {
@@ -32,4 +32,5 @@ class RobotomyRequestForm : public AForm
 		
 		void beSigned(Bureaucrat bureaucrat);
 		bool robotomization(const std::string &target);
+		void execute(Bureaucrat const &executor) const override;
 };

@@ -6,11 +6,12 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:13:48 by juitz             #+#    #+#             */
-/*   Updated: 2025/01/09 18:51:17 by juitz            ###   ########.fr       */
+/*   Updated: 2025/01/13 14:44:24 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include <bits/types/timer_t.h>
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm("DefaultForm", 145, 137)
 {
@@ -20,6 +21,7 @@ RobotomyRequestForm::RobotomyRequestForm() : AForm("DefaultForm", 145, 137)
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target) : AForm (target, 72, 45)
 {
 	std::cout << "RobotomyRequestForm makes some drilling noises" << std::endl;
+	robotomization(target);
 	//std::cout << target << " has been robotomized"
 }
 
@@ -49,7 +51,7 @@ const std::string &RobotomyRequestForm::getName() const
 bool RobotomyRequestForm::robotomization(const std::string &target)
 {
 	int random;
-	srand(static_cast<unsigned int>(time(0)));
+	srand(static_cast<unsigned int>(time(NULL)));
 	random = rand();
 	if (random % 2)
 		return (std::cout << target << " has been robotomized" << std::endl, true);

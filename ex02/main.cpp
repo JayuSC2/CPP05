@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:15:08 by juitz             #+#    #+#             */
-/*   Updated: 2025/01/09 18:43:27 by juitz            ###   ########.fr       */
+/*   Updated: 2025/01/13 14:39:29 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(void)
 	RobotomyRequestForm Bot1("testbot");
 	RobotomyRequestForm Bot2("testbot2");
 	
-	Bot1.robotomization("testbot2");
+	//Bot1.robotomization("testbot2");
 /* 	
 	ShrubberyCreationForm file1("testfile");
 

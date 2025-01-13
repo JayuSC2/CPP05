@@ -6,13 +6,12 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 15:21:08 by juitz             #+#    #+#             */
-/*   Updated: 2025/01/09 17:14:50 by juitz            ###   ########.fr       */
+/*   Updated: 2025/01/13 14:38:14 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
-#include <istream>
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("DefaultForm", 145, 137)
 {
